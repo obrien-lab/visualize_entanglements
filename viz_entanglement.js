@@ -526,10 +526,10 @@ function loadStructure (arg_str) {
 }
 
 //////////////////////// Generate page contents //////////////////////////////
-addElement(createElement("div", {}, { top: "0%", 
+addElement(createElement("div", {}, { top: "2%", 
                                       left: "0%", 
                                       width: "18%",
-                                      height: "85%",
+                                      height: "83%",
                                       textAlign: "center",
                                       backgroundColor: "#F0F8FF"}))
 
