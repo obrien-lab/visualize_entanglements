@@ -12,12 +12,12 @@ stage.setParameters({
   backgroundColor: "white"
 })
 
-function addElement (el) {
+function addElement (container, el) {
   Object.assign(el.style, {
     position: "absolute",
     zIndex: 10
   })
-  stage.viewer.container.appendChild(el)
+  container.appendChild(el)
 }
 
 function createElement (name, properties, style) {
@@ -41,7 +41,7 @@ function createFileButton (label, properties, style) {
   var input = createElement("input", Object.assign({
     type: "file"
   }, properties), { display: "none" })
-  addElement(input)
+  addElement(document.getElementById("cntrl_panel"), input)
   var button = createElement("input", {
     value: label,
     type: "button",
@@ -526,14 +526,7 @@ function loadStructure (arg_str) {
 }
 
 //////////////////////// Generate page contents //////////////////////////////
-addElement(createElement("div", {}, { top: "2%", 
-                                      left: "0%", 
-                                      width: "18%",
-                                      height: "83%",
-                                      textAlign: "center",
-                                      backgroundColor: "#F0F8FF"}))
-
-addElement(createElement("span", {
+addElement(document.getElementById("cntrl_panel"), createElement("span", {
   innerText: "Select an example below:"
 }, { top: "1%", 
      left: "1%", 
@@ -558,9 +551,9 @@ var StructSelect = createSelect([
      left: "1%",
      "font-family": "Arial", 
      "font-size": "1.8vmin"})
-addElement(StructSelect)
+addElement(document.getElementById("cntrl_panel"), StructSelect)
 
-addElement(createElement("span", {
+addElement(document.getElementById("cntrl_panel"), createElement("span", {
   innerText: "Check/uncheck the following \noptions to show/hide:"
 }, { top: "7%", 
      left: "1%",
@@ -579,11 +572,11 @@ var ligandCheckbox = createElement("input", {
      width: "1.6vmin",
      height: "1.6vmin",
      margin: "0.2vmin" })
-addElement(ligandCheckbox)
-addElement(createElement("span", {
+addElement(document.getElementById("cntrl_panel"), ligandCheckbox)
+addElement(document.getElementById("cntrl_panel"), createElement("span", {
   innerText: "ligand"
 }, { top: "12%", 
-     left: "2.5%",
+     left: "5vmin",
      "font-family": "Arial", 
      "font-size": "1.8vmin" }))
 
@@ -603,11 +596,11 @@ var nativeCheckbox = createElement("input", {
      width: "1.6vmin",
      height: "1.6vmin",
      margin: "0.2vmin" })
-addElement(nativeCheckbox)
-addElement(createElement("span", {
+addElement(document.getElementById("cntrl_panel"), nativeCheckbox)
+addElement(document.getElementById("cntrl_panel"), createElement("span", {
   innerText: "native structure"
 }, { top: "14.5%", 
-     left: "2.5%",
+     left: "5vmin",
      "font-family": "Arial", 
      "font-size": "1.8vmin" }))
 
@@ -627,11 +620,11 @@ var stateCheckbox = createElement("input", {
      width: "1.6vmin",
      height: "1.6vmin",
      margin: "0.2vmin" })
-addElement(stateCheckbox)
-addElement(createElement("span", {
+addElement(document.getElementById("cntrl_panel"), stateCheckbox)
+addElement(document.getElementById("cntrl_panel"), createElement("span", {
   innerText: "misfolding structure"
 }, { top: "17%", 
-     left: "2.5%",
+     left: "5vmin",
      "font-family": "Arial", 
      "font-size": "1.8vmin" }))
 
@@ -653,11 +646,11 @@ var entanglementCheckbox = createElement("input", {
      width: "1.6vmin",
      height: "1.6vmin",
      margin: "0.2vmin" })
-addElement(entanglementCheckbox)
-addElement(createElement("span", {
+addElement(document.getElementById("cntrl_panel"), entanglementCheckbox)
+addElement(document.getElementById("cntrl_panel"), createElement("span", {
   innerText: "entanglements"
 }, { top: "19.5%", 
-     left: "2.5%",
+     left: "5vmin",
      "font-family": "Arial", 
      "font-size": "1.8vmin" }))
 
@@ -671,9 +664,9 @@ var centerButton = createElement("input", {
      left: "1%",
      "font-family": "Arial", 
      "font-size": "1.8vmin" })
-addElement(centerButton)
+addElement(document.getElementById("cntrl_panel"), centerButton)
 
-addElement(createElement("span", {
+addElement(document.getElementById("cntrl_panel"), createElement("span", {
   innerText: "Lasso-like entanglement topology:"
 }, { top: "27%", 
      left: "1%", 
@@ -690,6 +683,6 @@ var topo_graph_div = createElement("div",
     height: div_length.toString()+"vw",
     textAlign: "center",
     backgroundColor: "white"})
-addElement(topo_graph_div)
+addElement(document.getElementById("cntrl_panel"), topo_graph_div)
 
 loadStructure("CAT-III_state_P12&213&167-183&25-44&3cla&A&5&CLM&1-213&0.87&0.13")
