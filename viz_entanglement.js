@@ -685,4 +685,4 @@ var topo_graph_div = createElement("div",
     backgroundColor: "white"})
 addElement(document.getElementById("cntrl_panel"), topo_graph_div)
 
-loadStructure("CAT-III_state_P12&213&167-183&25-44&3cla&A&5&CLM&1-213&0.87&0.13")
+loadStructure("CAT-III_state_P12&213&(167-183) or (100-120)&25-44&3cla&A&5&CLM&1-213&0.87&0.13")
