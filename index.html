@@ -436,7 +436,8 @@ function loadStructure (arg_str) {
   stage.removeAllComponents()
 
   var argvs = arg_str.split('&')
-  var url_1 = "https://cdn.jsdelivr.net/gh/yuj179/topo_entanglements/structure_pdb/"+argvs[0]+".pdb" //url for state structure
+  //var url_1 = "https://cdn.jsdelivr.net/gh/yuj179/topo_entanglements/structure_pdb/"+argvs[0]+".pdb" //url for state structure
+  var url_1 = "https://yuj179.github.io/topo_entanglements/structure_pdb/"+argvs[0]+".pdb" //url for state structure
   var s1 = "1-"+argvs[1] //select protein
   var s2 = argvs[2] //select circle
   var s3 = argvs[3] //select thread
@@ -908,8 +909,20 @@ loadStructure(StructSelect.value)
 
 <div id="bottom_div" style="width:80%; height:25%; margin-left: 10%; margin-top: 1%;">
     <div id="video" style="float: left; width:30%; height:100%;">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6iMGAdf861I" allow="fullscreen">
-      </iframe> 
+      <iframe width="100%" height="80%" src="https://www.youtube.com/embed/6iMGAdf861I" allow="fullscreen">
+      </iframe>
+      <a target="_blank" onclick="openVideo('https://yuj179.github.io/topo_entanglements/IVE_example_small.mp4')">
+        <div style="padding-top: 2%; font-family: Arial; font-size: 1.6vmin; cursor: pointer;" onmouseover="this.style.color='orange';" onmouseout="this.style.color='black';">
+          Click this to watch the video if YouTube is not accessible.
+        </div>
+      </a>
+      <script type="text/javascript">
+        function openVideo(src) {
+          var page = window.open();
+          var html="<body style='background:black'><div style='width:80%;margin:auto;'><video controls width='100%' autoplay src='"+src+ "'></video></div></body>"
+          page.document.write(html);
+        }
+      </script>
     </div>
     <div id="comment" style="float: right; width:68%; height:80%;">
       <div class="main_text">
