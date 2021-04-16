@@ -759,15 +759,30 @@ addElement(document.getElementById("cntrl_panel"), StructSelect)
 
 var centerButton = createElement("input", {
   type: "button",
-  value: "center",
+  value: "Center",
   onclick: function () {
     reset_view()
   }
 }, { top: "15%", 
+     left: "48%",
+     "font-family": "Arial", 
+     "font-size": "1.1vmin" })
+addElement(document.getElementById("cntrl_panel"), centerButton)
+
+var downloadButton = createElement("input", {
+  type: "button",
+  value: "Download",
+  onclick: function () {
+    var arg_str = StructSelect.value
+    var argvs = arg_str.split('&')
+    var url = "https://yuj179.github.io/topo_entanglements/structure_pdb/"+argvs[0]+".pdb" //url for state structure
+    window.open(url)
+  }
+}, { top: "15%", 
      left: "70%",
      "font-family": "Arial", 
-     "font-size": "1.2vmin" })
-addElement(document.getElementById("cntrl_panel"), centerButton)
+     "font-size": "1.1vmin" })
+addElement(document.getElementById("cntrl_panel"), downloadButton)
 
 addElement(document.getElementById("cntrl_panel"), createElement("span", {
   innerText: "Check/uncheck the following options to show/hide:"
@@ -791,7 +806,7 @@ var ligandCheckbox = createElement("input", {
      margin: "0.6vmin" })
 addElement(document.getElementById("cntrl_panel"), ligandCheckbox)
 var label = createElement("label", {
-  innerText: "ligand",
+  innerText: "Ligands",
   }, { top: "57%", 
        left: "14%",
        "font-family": "Arial", 
@@ -818,7 +833,7 @@ var nativeCheckbox = createElement("input", {
      margin: "0.6vmin" })
 addElement(document.getElementById("cntrl_panel"), nativeCheckbox)
 var label = createElement("label", {
-  innerText: "native structure",
+  innerText: "Native structure",
   }, { top: "67%", 
        left: "14%",
        "font-family": "Arial", 
@@ -845,7 +860,7 @@ var stateCheckbox = createElement("input", {
      margin: "0.6vmin" })
 addElement(document.getElementById("cntrl_panel"), stateCheckbox)
 var label = createElement("label", {
-  innerText: "misfolding structure",
+  innerText: "Misfolding structure",
   }, { top: "77%", 
        left: "14%",
        "font-family": "Arial", 
@@ -874,7 +889,7 @@ var entanglementCheckbox = createElement("input", {
      margin: "0.6vmin" })
 addElement(document.getElementById("cntrl_panel"), entanglementCheckbox)
 var label = createElement("label", {
-  innerText: "entanglements",
+  innerText: "Entanglements",
   }, { top: "87%", 
        left: "14%",
        "font-family": "Arial", 
@@ -963,7 +978,7 @@ loadStructure(StructSelect.value)
       </div>
     </div>
     <div class="footnotes" style="float: right; width:68%; height:20%; margin-top: 1%;">
-      <p style="text-align: justify;">Cited by: Yang Jiang, Syam Sundar Neti, Priya Pradhan, Squire J. Booker and Edward P. O’Brien. How synonymous mutations alter enzyme structure and function over long time scales. (to be submitted)</p>
+      <p style="text-align: justify;">Cited by: Yang Jiang, Syam Sundar Neti, Priya Pradhan, Squire J. Booker and Edward P. O’Brien. <i>How synonymous mutations alter enzyme structure and function over long time scales</i>. (to be submitted)</p>
       <p>Created by <a href="https://orcid.org/0000-0003-1100-9177" target="_blank">Yang Jiang</a> at July 2020.</p>
     </div>
   </div>
