@@ -760,6 +760,7 @@ addElement(document.getElementById("cntrl_panel"), StructSelect)
 var centerButton = createElement("input", {
   type: "button",
   value: "Center",
+  title: "Center this molecule in the scene",
   onclick: function () {
     reset_view()
   }
@@ -772,6 +773,7 @@ addElement(document.getElementById("cntrl_panel"), centerButton)
 var downloadButton = createElement("input", {
   type: "button",
   value: "Download",
+  title: "Download the pdb file",
   onclick: function () {
     var arg_str = StructSelect.value
     var argvs = arg_str.split('&')
