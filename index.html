@@ -269,8 +269,10 @@ function reset_view() {
   var new_box = new THREE.Box3(b_min, b_max)
 
   if (! new_box.isEmpty()) {
+    var new_box_center = new THREE.Vector3()
+    new_box.getCenter(new_box_center)
     stage.animationControls.zoomMove(
-      new_box.getCenter(),
+      new_box_center,
       stage.getZoomForBox(new_box),
       1000
     )
