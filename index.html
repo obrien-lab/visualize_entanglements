@@ -741,12 +741,12 @@ addElement(document.getElementById("cntrl_panel"), createElement("span", {
 // Select syntax: 
 // Github file name & chain length & circle_sel & thread_sel & Pdb ID & chain ID & offset & ligand_sel & superpose_sel & Q & G & info
 var StructSelect = createSelect([
-  [ "CAT-III_state_P13&213&167-183&25-44&3cla&A&5&CLM&1-213&0.87&0.13&deep;1-35;165-195", "CAT-III State P13" ],
-  [ "DDLB_state_P4&306&119-177&185-204&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.66&0.06&deep;178-186;113-180", "DDLB State P4" ],
-  [ "DDLB_state_P8&306&145-174&121-140&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.85&0.04&deep;140-146;142-180", "DDLB State P8" ],
+  [ "CAT-III_state_P13&213&169-184&25-44&3cla&A&5&CLM&1-213&0.86&0.15&deep;1-35;165-195", "CAT-III State P13" ],
+  [ "DDLB_state_P4&306&117-177&185-204&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.64&0.06&deep;178-186;113-180", "DDLB State P4" ],
+  [ "DDLB_state_P8&306&145-174&121-140&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.91&0.05&deep;140-146;142-180", "DDLB State P8" ],
   [ "DDLB_state_C8&306&119-177&179-198&4c5c&A&0&(310-312) or (1313-1314)&119-177&-&-&P5", "DDLB State C8" ],
   [ "DDLB_state_C9&306&145-174&121-140&4c5c&A&0&(310-312) or (1313-1314)&145-174&-&-&P10", "DDLB State C9" ],
-  [ "DHFR_state_P2&159&8-112&118-137&4kjk&A&0&(201 or 204) and %A&26-112&0.68&0.05&shallow;118-123;-", "DHFR State P2" ],
+  [ "DHFR_state_P2&159&7-112&118-137&4kjk&A&0&(201 or 204) and %A&26-112&0.73&0.05&shallow;118-123;-", "DHFR State P2" ],
 ], {
   onchange: function (e) {
     loadStructure(e.target.value)
