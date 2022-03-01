@@ -741,14 +741,12 @@ addElement(document.getElementById("cntrl_panel"), createElement("span", {
 // Select syntax: 
 // Github file name & chain length & circle_sel & thread_sel & Pdb ID & chain ID & offset & ligand_sel & superpose_sel & Q & G & info
 var StructSelect = createSelect([
-  [ "CAT-III_state_P12&213&167-183&25-44&3cla&A&5&CLM&1-213&0.87&0.13&deep;1-35;165-195", "CAT-III State P12" ],
-  [ "CAT-III_state_P10&213&85-101&122-141&3cla&A&5&CLM&1-213&0.64&0.05&deep;105-128;84-104", "CAT-III State P10" ],
-  [ "CAT-III_state_P13&213&71-163&167-186&3cla&A&5&CLM&1-213&0.85&0.09&deep;170-213;165-195", "CAT-III State P13" ],
-  [ "DDLB_state_P5&306&119-177&185-204&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.66&0.06&deep;178-186;113-180", "DDLB State P5" ],
-  [ "DDLB_state_P10&306&145-174&121-140&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.85&0.04&deep;140-146;142-180", "DDLB State P10" ],
+  [ "CAT-III_state_P13&213&167-183&25-44&3cla&A&5&CLM&1-213&0.87&0.13&deep;1-35;165-195", "CAT-III State P13" ],
+  [ "DDLB_state_P4&306&119-177&185-204&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.66&0.06&deep;178-186;113-180", "DDLB State P4" ],
+  [ "DDLB_state_P8&306&145-174&121-140&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.85&0.04&deep;140-146;142-180", "DDLB State P8" ],
   [ "DDLB_state_C8&306&119-177&179-198&4c5c&A&0&(310-312) or (1313-1314)&119-177&-&-&P5", "DDLB State C8" ],
   [ "DDLB_state_C9&306&145-174&121-140&4c5c&A&0&(310-312) or (1313-1314)&145-174&-&-&P10", "DDLB State C9" ],
-  [ "DHFR_state_P3&159&8-112&118-137&4kjk&A&0&(201 or 204) and %A&26-112&0.68&0.05&shallow;118-123;-", "DHFR State P3" ],
+  [ "DHFR_state_P2&159&8-112&118-137&4kjk&A&0&(201 or 204) and %A&26-112&0.68&0.05&shallow;118-123;-", "DHFR State P2" ],
 ], {
   onchange: function (e) {
     loadStructure(e.target.value)
@@ -949,7 +947,7 @@ loadStructure(StructSelect.value)
         <p>Details of the definition of parameter <i>G</i> that is used to detect the topological entanglement for a given protein structure can be found <a href="https://git.psu.edu/yuj179/cg_simtk_protain_folding/-/wikis/help_wiki/calc_entanglement_number.pl#4-basic-theory" target="_blank">here</a>.</p>
       </div>
       <div class="notes" style="width:100%; height:100%;">
-        <p><b>Please note:</b> The shallow entanglement of DHFR state P3 should have 0 linking number, i.e., <i>g</i><sub>C</sub> = 0, when we consider a consecutive backbone. However, we excluded 4 residues before and after the native contact when we calculated the <i>G</i> metric, which results <i>g</i><sub>C</sub> = 1.</p>
+        <p><b>Please note:</b> The shallow entanglement of DHFR state P2 should have 0 linking number, i.e., <i>g</i><sub>C</sub> = 0, if we consider a consecutive backbone. However, we excluded 4 residues before and after the native contact when we calculated the <i>G</i> metric, which results <i>g</i><sub>C</sub> = 1.</p>
         <div style="height:20%; float:left;">
           <p style="padding-bottom: 18%;">The topology graph of the consecutive backbone should be </p>
         </div> 
@@ -983,7 +981,7 @@ loadStructure(StructSelect.value)
     </div>
     <div class="footnotes" style="float: right; width:68%; height:20%; margin-top: 1%;">
       <p style="text-align: justify;">Cited by: Yang Jiang, Syam Sundar Neti, Priya Pradhan, Squire J. Booker and Edward P. O’Brien. <i>How synonymous mutations alter enzyme structure and function over long time scales</i>. (to be submitted)</p>
-      <p>Created by <a href="https://orcid.org/0000-0003-1100-9177" target="_blank">Yang Jiang</a> at July 2020.</p>
+      <p>Created by <a href="https://orcid.org/0000-0003-1100-9177" target="_blank">Yang Jiang</a> at July 2020. Last updated at March 2022.</p>
     </div>
   </div>
 
