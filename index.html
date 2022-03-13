@@ -439,7 +439,7 @@ function loadStructure (arg_str) {
 
   var argvs = arg_str.split('&')
   //var url_1 = "https://cdn.jsdelivr.net/gh/yuj179/topo_entanglements/structure_pdb/"+argvs[0]+".pdb" //url for state structure
-  var url_1 = "https://yuj179.github.io/topo_entanglements/structure_pdb/"+argvs[0]+".pdb" //url for state structure
+  var url_1 = "./structure_pdb/"+argvs[0]+".pdb" //url for state structure
   var s1 = "1-"+argvs[1] //select protein
   var s2 = argvs[2] //select circle
   var s3 = argvs[3] //select thread
@@ -777,7 +777,7 @@ var downloadButton = createElement("input", {
   onclick: function () {
     var arg_str = StructSelect.value
     var argvs = arg_str.split('&')
-    var url = "https://yuj179.github.io/topo_entanglements/structure_pdb/"+argvs[0]+".pdb" //url for state structure
+    var url = "./structure_pdb/"+argvs[0]+".pdb" //url for state structure
     window.open(url)
   }
 }, { top: "15%", 
@@ -928,7 +928,7 @@ loadStructure(StructSelect.value)
     <div id="video" style="float: left; width:30%; height:100%;">
       <iframe width="100%" height="90%" src="https://www.youtube.com/embed/p-VhJf7XFLM" allow="fullscreen">
       </iframe>
-      <a target="_blank" onclick="openVideo('https://yuj179.github.io/topo_entanglements/Visualize Entanglements in Misfolded Protein Structures.mp4')">
+      <a target="_blank" onclick="openVideo('./Visualize Entanglements in Misfolded Protein Structures.mp4')">
         <div style="padding-top: 2%; font-family: Arial; font-size: 1.6vmin; cursor: pointer;" onmouseover="this.style.color='orange';" onmouseout="this.style.color='black';">
           Click this to watch the video if YouTube is not accessible.
         </div>
