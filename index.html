@@ -948,31 +948,30 @@ loadStructure(StructSelect.value)
         <p>Details of the definition of parameter <i>G</i> that is used to detect the topological entanglement for a given protein structure can be found <a href="https://github.com/obrien-lab/cg_simtk_protein_folding/wiki/calc_entanglement_number.pl#4-basic-theory" target="_blank">here</a>.</p>
       </div>
       <div class="notes" style="width:100%; height:100%;">
-        <p><b>Please note:</b> The shallow entanglement of DHFR state P2 should have 0 linking number, i.e., <i>g</i><sub>C</sub> = 0, if we consider a consecutive backbone. However, we excluded 4 residues before and after the native contact when we calculated the <i>G</i> metric, which results <i>g</i><sub>C</sub> = 1.</p>
-        <div style="height:20%; float:left;">
-          <p style="padding-bottom: 18%;">The topology graph of the consecutive backbone should be </p>
-        </div> 
-        <div style="width:8vmin; height:8vmin; float:left">
-          <svg width="100%" height="100%" viewBox="0 0 64 64">
+        <div style="float:left; width:85%; vertical-align: top;">
+          <p><b>Please note:</b> If you consider a consecutive backbone between the threading segment and the closed loop, the shallow entanglement of DHFR state P2 will have 0 linking number, i.e., <i>g</i><sub>C</sub> = 0. However, we excluded 4 residues before and after the closed loop when we calculated the <i>G</i> metric, which yields <i>g</i><sub>C</sub> = 1. The topology graph of DHFR state P2 with consecutive backbone is shown on the right.</p>
+        </div>
+        <div style="float: right; width:12%; vertical-align: top;">
+          <svg style="vertical-align: top;" viewBox="0 0 64 64">
             <path d="M28 50 C28 48 28 46 24 44 C10 38 8 12 32 12 C56 12 54 38 40 44 C36 46 36 48 36 50" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M28 50 C28 48 28 46 24 44 C10 38 8 12 32 12 C56 12 54 38 40 44 C36 46 36 48 36 50" stroke="red" stroke-width="4%" fill="none"></path> 
+            <path d="M28 50 C28 48 28 46 24 44 C10 38 8 12 32 12 C56 12 54 38 40 44 C36 46 36 48 36 50" stroke="red" stroke-width="3.5%" fill="none"></path> 
             <path d="M42 52 C44 48 38.48190217326439 40.4886592300064 40.48190217326439 36.4886592300064" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M42 52 C44 48 38.48190217326439 40.4886592300064 40.48190217326439 36.4886592300064" stroke="blue" stroke-width="4%" fill="none"></path> 
+            <path d="M42 52 C44 48 38.48190217326439 40.4886592300064 40.48190217326439 36.4886592300064" stroke="blue" stroke-width="3.5%" fill="none"></path> 
             <path d="M22 52 C24 56 28 54 28 50" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M22 52 C24 56 28 54 28 50" stroke="gray" stroke-width="4%" fill="none"></path> 
+            <path d="M22 52 C24 56 28 54 28 50" stroke="gray" stroke-width="3.5%" fill="none"></path> 
             <path d="M36 50 C36 54 40 56 42 52" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M36 50 C36 54 40 56 42 52" stroke="gray" stroke-width="4%" fill="none"></path> 
+            <path d="M36 50 C36 54 40 56 42 52" stroke="blue" stroke-width="3.5%" fill="none"></path> 
             <path d="M22 52 C20 48 8 54 4 52" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M22 52 C20 48 8 54 4 52" stroke="gray" stroke-width="4%" fill="none"></path> 
+            <path d="M22 52 C20 48 8 54 4 52" stroke="gray" stroke-width="3.5%" fill="none"></path> 
             <text text-anchor="start" fill="black" font-size="40%" font-family="Arial" x="1" y="58"> N-ter </text> 
             <path d="M40.48190217326439 36.4886592300064 C42.48190217326439 32.4886592300064 46.96380434652878 48.977318460012796 48.96380434652878 44.977318460012796" stroke="white" stroke-width="5%" fill="none"></path>
-            <path d="M40.48190217326439 36.4886592300064 C42.48190217326439 32.4886592300064 46.96380434652878 48.977318460012796 48.96380434652878 44.977318460012796" stroke="blue" stroke-width="4%" fill="none"></path> 
+            <path d="M40.48190217326439 36.4886592300064 C42.48190217326439 32.4886592300064 46.96380434652878 48.977318460012796 48.96380434652878 44.977318460012796" stroke="blue" stroke-width="3.5%" fill="none"></path> 
             <path d="M48.96380434652878 44.977318460012796 C50.96380434652878 40.977318460012796 56 46.977318460012796 60 44.977318460012796" stroke="white" stroke-width="5%" fill="none"></path>
             <path d="M48.96380434652878 44.977318460012796 C50.96380434652878 40.977318460012796 56 46.977318460012796 60 44.977318460012796" stroke="gray" stroke-width="4%" fill="none"></path> 
             <text text-anchor="end" fill="black" font-size="40%" font-family="Arial" x="63" y="50.977318460012796"> C-ter </text> 
             <line x1="28" y1="50" x2="36" y2="50" stroke="orange" stroke-width="4%" stroke-dasharray="1% 0.5%"></line> 
-            <circle cx="28" cy="50" r="2" stroke="black" stroke-width="2%" fill="orange"></circle> 
-            <circle cx="36" cy="50" r="2" stroke="black" stroke-width="2%" fill="orange"></circle> 
+            <circle cx="28" cy="50" r="2" stroke="black" stroke-width="1.5%" fill="orange"></circle> 
+            <circle cx="36" cy="50" r="2" stroke="black" stroke-width="1.5%" fill="orange"></circle> 
             <text text-anchor="end" fill="black" font-size="40%" font-family="Arial" x="30" y="60"> 7 </text> 
             <text text-anchor="start" fill="black" font-size="40%" font-family="Arial" x="34" y="60"> 112 </text> 
             <text text-anchor="middle" fill="black" font-size="40%" font-family="Arial" x="32" y="8"> <tspan> <tspan font-style="italic">g</tspan><tspan font-size="70%" baseline-shift="sub">N</tspan> = 0; <tspan font-style="italic">g</tspan><tspan font-size="70%" baseline-shift="sub">C</tspan> = 0 </tspan> </text>
