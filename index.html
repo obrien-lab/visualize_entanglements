@@ -498,7 +498,7 @@ function loadStructure (arg_str) {
   var ent_info = argvs[11]
 
   var if_ribosome = false
-  if (Q == "-" && G == "-") {if_ribosome = true} 
+  if (ent_info.startsWith('P')) {if_ribosome = true} 
 
   document.getElementById("info").innerHTML = "Loading structures... (if no response for a long time, please refresh this page)"
   
@@ -745,8 +745,8 @@ var StructSelect = createSelect([
   [ "CAT-III_state_P13&213&169-184&25-44&3cla&A&5&CLM&1-213&0.86&0.15&deep;1-35;165-195", "CAT-III State P13" ],
   [ "DDLB_state_P4&306&117-177&185-204&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.64&0.06&deep;178-186;113-180", "DDLB State P4" ],
   [ "DDLB_state_P8&306&145-174&121-140&4c5c&A&0&(310-312) or (1313-1314)&1-306&0.91&0.05&deep;140-146;142-180", "DDLB State P8" ],
-  [ "DDLB_state_C8&306&119-177&179-198&4c5c&A&0&(310-312) or (1313-1314)&119-177&-&-&P4", "DDLB State C8" ],
-  [ "DDLB_state_C9&306&145-174&121-140&4c5c&A&0&(310-312) or (1313-1314)&145-174&-&-&P8", "DDLB State C9" ],
+  [ "DDLB_state_C8&306&119-177&179-198&4c5c&A&0&(310-312) or (1313-1314)&119-177&0.32&0.015&P4", "DDLB State C8" ],
+  [ "DDLB_state_C9&306&145-174&121-140&4c5c&A&0&(310-312) or (1313-1314)&145-174&0.26&0.021&P8", "DDLB State C9" ],
   [ "DHFR_state_P2&159&7-112&118-137&4kjk&A&0&(201 or 204) and %A&26-112&0.73&0.05&shallow;118-123;-", "DHFR State P2" ],
 ], {
   onchange: function (e) {
